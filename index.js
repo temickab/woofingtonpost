@@ -6,7 +6,7 @@ const exhbs = require('express-handlebars')
 
 //For example, use the following code to 
 //serve images, CSS files, and JavaScript files in a directory named public:
-app.use(express.static('public'));
+app.use('/assets', express.static('public'))
 
 
 app.engine('handlebars',exhbs( { defaultLayout: 'main' })) 
@@ -25,7 +25,7 @@ app.listen(1986, () => {
      res.render('articles') 
  })
 
-
+ 
  
 
 
