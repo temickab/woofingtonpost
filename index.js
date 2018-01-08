@@ -1,12 +1,13 @@
 const express = require('express')
 const app = express()
 const exhbs = require('express-handlebars')
+const bodyParser = require('body-parser')
 //
 
 
 //For example, use the following code to 
 //serve images, CSS files, and JavaScript files in a directory named public:
-app.use('/assets', express.static('public'))
+app.use(express.static('public'));
 
 
 app.engine('handlebars',exhbs( { defaultLayout: 'main' })) 
@@ -25,8 +26,10 @@ app.listen(1986, () => {
      res.render('articles') 
  })
 
- 
- 
+
+  /*app.get("/:name", (req, res) => {
+    res.send(`hello ${req.params.name}`)
+  })
 
 
 
