@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/woofingtonpost1', { useMongoClient: true }))
+mongoose.connect('mongodb://localhost/woofingtonpost1', { useMongoClient: true })
 
 mongoose.Promise = Promise
 
@@ -9,9 +9,8 @@ module.exports = mongoose
 
 /*db.woofingtonpost1.insert(
     {
-        {
-            "name": "Funny Puppy",
-            "site": "https://www.funnypuppy.com"
+         "name": "Funny Puppy",
+         "site": "https://www.funnypuppy.com"
           },
           {
             "name": "The Blind Dog Cafe",
@@ -31,9 +30,7 @@ module.exports = mongoose
           },
           {
             "name": "Puppy Cam",
-            "site": "https://www.livepuppycam.com"
-          },
-         
+            "site": "https://www.livepuppycam.com" 
     })
 
 
