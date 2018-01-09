@@ -5,17 +5,32 @@ body{
     background-size: cover;
     height: 803px;
     background-position: center;
+}
 
     /*Photo by Mat Hayward/Shutterstock
     website: http://roamnewroads.ca/7-tips-for-taking-your-dog-on-summer-road-trips/
     */
-}
+
 
 h1{
     color: red;
 }
 
-topnav{
-    background-color: rgb(170, 158, 158);
+#topnav{
+    background-color: black;
+    opacity: 0.5;
 }
 
+/* Mobile and Tablet Devices Below */
+
+/*@media (min-width: 320px) and (max-width: 680px) {
+  
+   body{
+       background-image: url(puppy.png);
+       background-size: cover;
+       background-position: center;
+
+       }
+   
+
+  }*/

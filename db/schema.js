@@ -6,5 +6,13 @@ const WoofingtonSchema = new mongoose.Schema({
   })
 
 mongoose.model('Woofington', WoofingtonSchema)
-
+//here you registered a woofington model
 module.exports = mongoose
+
+
+/*
+
+
+
+*/
+

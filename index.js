@@ -18,21 +18,20 @@ app.listen(1986, () => {
   })
 
    //Routing
-   app.get('/', (req, res) => {
+  app.get('/', (req, res) => {
     res.render('homepg')
- })
+  })
 
   app.get('/articles', (req, res) => {
       res.render('articles') 
   })
 
-  app.get('links', (req, res) =>{
-    res.render('links')
+  app.get('/resource', (req, res) => {
+    res.render('resource')
   })
 
 
-
-
+  //ok one last thing 
 
   /*app.get("/:name", (req, res) => {
     res.send(`hello ${req.params.name}`)
