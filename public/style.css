@@ -1,0 +1,13 @@
+h1{
+    color: red;
+}
+
+body{
+    background-image: url(dog.png);
+    font-size: 12px;
+    background-size: cover;
+    height: 803px;
+    background-position: center;
+
+    /*Photo by Mat Hayward/Shutterstock*/
+}
