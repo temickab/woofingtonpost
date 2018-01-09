@@ -1,6 +1,3 @@
-h1{
-    color: red;
-}
 
 body{
     background-image: url(dog.png);
@@ -9,5 +6,16 @@ body{
     height: 803px;
     background-position: center;
 
-    /*Photo by Mat Hayward/Shutterstock*/
+    /*Photo by Mat Hayward/Shutterstock
+    website: http://roamnewroads.ca/7-tips-for-taking-your-dog-on-summer-road-trips/
+    */
 }
+
+h1{
+    color: red;
+}
+
+topnav{
+    background-color: rgb(170, 158, 158);
+}
+

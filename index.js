@@ -22,9 +22,14 @@ app.listen(1986, () => {
     res.render('homepg')
  })
 
- app.get('/articles', (req, res) => {
-    res.render('articles') 
-})
+  app.get('/articles', (req, res) => {
+      res.render('articles') 
+  })
+
+  app.get('links', (req, res) =>{
+    res.render('links')
+  })
+
 
 
 
