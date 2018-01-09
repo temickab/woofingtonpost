@@ -12,9 +12,7 @@ body{
     */
 
 
-h1{
-    color: red;
-}
+
 
 h3{
     color: brown;
@@ -24,21 +22,78 @@ h3{
     font-size: 50px;
 }
 
+iframe{
+
+}
+
 #topnav{
     background-color: brown;
     opacity: 0.5;
 }
+/*homepg.handlebars*/
+#welcome{
+    padding-left: 5px;
+    float: left;
+    color: brown;
+}
+/*end homepfg*/
 
-/* Mobile and Tablet Devices Below */
+h1{
+    color: brown;
+    padding-left: 200px;
+    padding-top: 120px;
+    font-family: 'Vidaloka', serif;
+    font-size: 80px;
+    text-align: center;
+}
 
-/*@media (min-width: 320px) and (max-width: 680px) {
-  
-   body{
-       background-image: url(puppy.png);
-       background-size: cover;
-       background-position: center;
+.headline{
+    padding-bottom: 30px;
+}
 
-       }
+.breakingNews{
+    background-image: url(gruff.png);
+    background-size: cover;
+    background-position: center;
+    border: solid;
+    border-color: brown;
+    float: left;
+    height: 250px;
+    width: 350px;
+      
+}
+
+.p1{
+    color: brown;
+    font-size: 40px;
+    text-align: left;
+    font-family: 'Vidaloka', serif;
+}
+
+/*End of homepg*/
+
+/*articles.handlebars*/
+
+.right-side{
+    padding-left: 600px;
+    font-size: 20px;
+    font-family: 'Vidaloka', serif;
    
+}
 
-  }*/
+.left-side{
+    float: left;
+    height: 5px;
+}
+
+.p2{
+    color: rgb(219, 168, 168);
+    font-size: 40px;
+    text-align: right;
+    font-family: 'Vidaloka', serif;
+    padding-bottom: 200px;
+    background-color: black;
+}
+/*End of articles.handlebars*/
+
+

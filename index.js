@@ -30,6 +30,8 @@ app.listen(1986, () => {
     res.render('resource')
   })
 
+ 
+
 
   //ok one last thing 
 
