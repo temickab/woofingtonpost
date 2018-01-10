@@ -11,6 +11,14 @@ function postSignup(request, response, next){
     return signupStrategy(request, response, next)
 }
 
+function getSignup(request, response, next) {
+    response.render('signup.handlebars', { message: request.flash('signupMessage') });
+  }
+
+  function getLogout(request, response, next) {
+    request.logout();
+    response.redirect('/');
+  }
 
 
 

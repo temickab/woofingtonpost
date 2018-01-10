@@ -39,11 +39,15 @@ iframe{
     margin-top: 60px;
 }
 
-button{
+.login-button{
     float: left;
     background-color: brown;
-    color: rgb(49, 9, 9);
-    height: 30px;
+    margin-top: 300px;
+    margin-left: -340px; 
+    color: rgb(185, 139, 139); 
+    font-size: 19px;
+    font-family: 'Vidaloka', serif;
+    height: 40px;
     width: 100px;
    
    

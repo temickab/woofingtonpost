@@ -2,12 +2,22 @@ const express = require('express')
 const exhbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const app = express()
-//
+const passport = require('passport')
+
+
+
 
 
 //For example, use the following code to 
 //serve images, CSS files, and JavaScript files in a directory named public:
 app.use(express.static('public'))
+
+require('./config/passport')(passport);
+
+app.use(function (req, res, next) {
+  res.locals.currentUser = req.user;
+  next();
+});
 
 
 app.engine('handlebars',exhbs( { defaultLayout: 'main' })) 
