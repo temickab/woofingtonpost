@@ -8,3 +8,6 @@ function authenticatedUser(req, res, next) {
 
   router.route("/secret")
   .get(authenticatedUser, usersController.secret)
+
+
+

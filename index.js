@@ -3,10 +3,8 @@ const exhbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const app = express()
 const passport = require('passport')
-
-
-
-
+const morgan = require('morgan')
+const user = require('/db/userschema')
 
 //For example, use the following code to 
 //serve images, CSS files, and JavaScript files in a directory named public:
@@ -40,10 +38,18 @@ app.listen(1986, () => {
     res.render('resource')
   })
 
- 
+  app.get('/loginButton', (req, res) => {
+    res.render('login')
+  }) 
+
+  app.get('/signupButton', (req, res) => {
+    res.render('signup')
+  }) 
 
 
-  //ok one last thing 
+//
+
+
 
   /*app.get("/:name", (req, res) => {
     res.send(`hello ${req.params.name}`)

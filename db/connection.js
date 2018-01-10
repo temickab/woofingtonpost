@@ -1,10 +1,12 @@
 const mongoose = require('mongoose')
 
 mongoose.connect('mongodb://localhost/woofingtonpost1', { useMongoClient: true })
+//mongoose.connect('mongodb://localhost/sign', {useMongoClient: true})
 
 mongoose.Promise = Promise
 
 module.exports = mongoose
+
 
 
 /*db.woofingtonpost1.insert(
