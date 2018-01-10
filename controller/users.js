@@ -23,14 +23,6 @@ function postSignup(request, response, next){
 
 
 /*
-  function postSignup(request, response, next) {
-    var signupStrategy = passport.authenticate('local-signup', {
-      successRedirect : '/',
-      failureRedirect : '/signup',
-      failureFlash : true
-    });
-
-    return signupStrategy(request, response, next);
-  }
+ 
 
 */
