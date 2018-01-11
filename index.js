@@ -48,8 +48,8 @@ app.listen(1986, () => {
     res.render('signup')
   }) 
 
-  app.get('article-edit', (req, res) => {
-    res.render('homepg')
+  app.get('./articles/create', (req, res) => {
+    res.render('article')
   }) 
 
   app.post('/signup',(req,res)=>{
