@@ -6,11 +6,13 @@ const passport = require('passport')
 const morgan = require('morgan')
 const articles = require('./controller/articles')
 const userController = require('./controller/users')
+const methodOverride = require('method-override')
 
 //For example, use the following code to 
 //serve images, CSS files, and JavaScript files in a directory named public:
-app.use(express.static('public'))
+app.use('/assets',express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))//for getiing post requestbody
+app.use(methodOverride('_method'))
 
 require('./config/passport')(passport);
 
@@ -32,9 +34,11 @@ app.listen(1986, () => {
     res.render('homepg')
   })
 
-  app.get('/articles', (req, res) => {
-      res.render('articles') 
-  }) 
+  app.use('/articles', articles) 
+
+  // app.get('/articles', (req, res) => {
+  //     res.redirect('articles/view') 
+  // }) 
 
   app.get('/resource', (req, res) => {
     res.render('resource')
@@ -59,7 +63,6 @@ app.listen(1986, () => {
     res.render('homepg')
   })
 
-  app.use('/articles', articles) 
 
 
   /*app.get("/:name", (req, res) => {
