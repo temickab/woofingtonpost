@@ -63,6 +63,12 @@ app.listen(1986, () => {
     res.render('homepg')
   })
 
+  app.set('port', process.env.PORT || 1986)
+
+  app.listen(app.get('port'), () => {
+    console.log(`✅ PORT: ${app.get('port')} 🌟`)
+  })
+
 
 
   /*app.get("/:name", (req, res) => {
