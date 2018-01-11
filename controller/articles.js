@@ -10,9 +10,9 @@ router.get('/view', function(req, res) {
     })
 })
 
-// CREATE new article //
+// CREATE new article ///articles/create
 router.get('/create', function(req, res) {
-    res.render('article-create')
+    res.render('articles-create')
 })
 
 router.post('/create', function(req, res) {
@@ -26,7 +26,7 @@ router.post('/create', function(req, res) {
 router.get('/edit/:_id', function(req, res) {
   Article.findOne({ _id: req.params._id })
     .then(function(data) {
-        res.render('article-edit', { article: data })
+        res.render('articles-edit', { article: data })
     })
 })
 

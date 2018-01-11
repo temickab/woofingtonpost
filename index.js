@@ -34,7 +34,7 @@ app.listen(1986, () => {
 
   app.get('/articles', (req, res) => {
       res.render('articles') 
-  })
+  }) 
 
   app.get('/resource', (req, res) => {
     res.render('resource')
@@ -48,13 +48,13 @@ app.listen(1986, () => {
     res.render('signup')
   }) 
 
-  app.get('./articles/create', (req, res) => {
-    res.render('article')
+  app.get('/breaking', (req, res) => {
+    res.render('breaking')
   }) 
 
   app.post('/signup',(req,res)=>{
     
-    var data=req.body;
+    const data = req.body;
     userController.signup(data)
     res.render('homepg')
   })
