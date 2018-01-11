@@ -48,6 +48,10 @@ app.listen(1986, () => {
     res.render('signup')
   }) 
 
+  app.get('article-edit', (req, res) => {
+    res.render('homepg')
+  }) 
+
   app.post('/signup',(req,res)=>{
     
     var data=req.body;
