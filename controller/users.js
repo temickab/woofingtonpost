@@ -1,6 +1,6 @@
-User.methods.encrypt = function(password){
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null)
-}
+//User.methods.encrypt = function(password){
+  //  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null)
+//}
 
 function postSignup(request, response, next){
     const signupStrategy = passport.authenticate('local-signup', {
@@ -17,13 +17,21 @@ function getSignup(request, response, next) {
 
   function getLogout(request, response, next) {
     request.logout();
-    response.redirect('/');
+     response.redirect('/');
   }
-
-
-
-
-
+  const user=require('../db/userschema')
+  //console.log('user schema',user)
+  const userdetail = user.model('UserDetail') 
+  //console.log(userdetail)
+ 
+module.exports={
+signup:function(data){
+    userdetail.collection.insert(data,(err,res)=>{
+        
+        console.log("Response data inserted",res);
+    })
+}
+}
 
 
 

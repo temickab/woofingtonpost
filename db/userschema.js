@@ -11,8 +11,7 @@ module.exports = mongoose
 
 
 /*
-you see here.so you can create another file and name it userscheama
-OK and do the same thingcopy and pasteokand
+
 
 
 */

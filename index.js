@@ -4,11 +4,13 @@ const bodyParser = require('body-parser')
 const app = express()
 const passport = require('passport')
 const morgan = require('morgan')
-const user = require('/db/userschema')
+const articles = require('./controller/articles')
+const userController = require('./controller/users')
 
 //For example, use the following code to 
 //serve images, CSS files, and JavaScript files in a directory named public:
 app.use(express.static('public'))
+app.use(bodyParser.urlencoded({ extended: true }))//for getiing post requestbody
 
 require('./config/passport')(passport);
 
@@ -46,14 +48,17 @@ app.listen(1986, () => {
     res.render('signup')
   }) 
 
+  app.post('/signup',(req,res)=>{
+    
+    var data=req.body;
+    userController.signup(data)
+    res.render('homepg')
+  })
 
-//
-
+  app.use('/articles', articles) 
 
 
   /*app.get("/:name", (req, res) => {
     res.send(`hello ${req.params.name}`)
   })*/
-
-
 
