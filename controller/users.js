@@ -19,6 +19,13 @@ function getSignup(request, response, next) {
     request.logout();
      response.redirect('/');
   }
+
+  function getLogIn(request, response, next){
+      request.login()
+      response.redirect('/')
+  }
+
+
   const user=require('../db/userschema')
   //console.log('user schema',user)
   const userdetail = user.model('UserDetail') 
