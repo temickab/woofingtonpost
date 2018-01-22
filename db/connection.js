@@ -1,20 +1,17 @@
 const mongoose = require('mongoose')
-if (process.env.NODE_ENV == "production") {
+if (process.env.NODE_ENV == 'production') {
   mongoose.connect(process.env.MLAB_URL)
 } else {
-  mongoose.connect("mongodb://localhost/project2");
+  mongoose.connect('mongodb://localhost/project2')
 }
 
-//mongoose.connect('mongodb://localhost/woofingtonpost1', { useMongoClient: true })
-
+// mongoose.connect('mongodb://localhost/woofingtonpost1', { useMongoClient: true })
 
 mongoose.Promise = Promise
 
 module.exports = mongoose
 
-
-
-/*db.woofingtonpost1.insert(
+/* db.woofingtonpost1.insert(
     {
          "name": "Funny Puppy",
          "site": "https://www.funnypuppy.com"
@@ -37,9 +34,8 @@ module.exports = mongoose
           },
           {
             "name": "Puppy Cam",
-            "site": "https://www.livepuppycam.com" 
+            "site": "https://www.livepuppycam.com"
     })
-
 
 Setting up the connection for mongoose
 mongoose.Promise = Promise
