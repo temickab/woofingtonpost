@@ -1,3 +1,6 @@
+// This is actually code for the user controller, rather the model
+// The code you have in your articleschema and userschema are truly your models.
+
 const passport = require("passport")
 
 // GET /signup

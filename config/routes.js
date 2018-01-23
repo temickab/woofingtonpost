@@ -6,8 +6,6 @@ function authenticatedUser(req, res, next) {
     res.redirect('/');
   }
 
-  router.route("/secret")
-  .get(authenticatedUser, usersController.secret)
-
-
-
+  router
+    .route("/secret")
+    .get(authenticatedUser, usersController.secret)
