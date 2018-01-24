@@ -1,48 +1,40 @@
+{{!-- Make sure to beautify your code --}}
 
+<div class='headline'>
+    <h1>Breaking News</h1>
+</div>
 
-
-
-    <div class='headline'><h1>Breaking News</h1></div>
-
-
-
-    <div class='wrapper1'>
-     <div class='breakingNews'>
-         <!--Photo of dog with glasses and hat from: https://mlblogsjdhernandez.
+<div class='wrapper1'>
+    <div class='breakingNews'>
+        <!--Photo of dog with glasses and hat from: https://mlblogsjdhernandez.
          wordpress.com/2014/08/25/jds-ballpark-tour-eighth-inning-flushing-ny/-->
-     </div>
-     <p class ='p1'>Senator Gruff was seen on L street Homeless!</p> 
-     <p class ='p1'>Gruff's wife kicked him out on the street because he ate all of the bacon strips!</p>
     </div>
+    <p class='p1'>Senator Gruff was seen on L street Homeless!</p>
+    <p class='p1'>Gruff's wife kicked him out on the street because he ate all of the bacon strips!</p>
+</div>
 
 
+<h3>
+    <i class="fa fa-paw" aria-hidden="true"></i>Latest Pooch News</i>
+</h3>
+
+<aside class='left-side'>
+    <p class='p2'>Baby attacked but vicious pugs</p>
+</aside>
 
 
-
-
-
-
-
-
-<h3><i class="fa fa-paw" aria-hidden="true"></i>Latest Pooch News</i></h3>
-
-     <aside class='left-side'>
-          <p class ='p2'>Baby attacked but vicious pugs</p>
-     </aside>
-
-
-     <aside class='right-side'>
-         <iframe src="https://giphy.com/embed/8J4w2i7kP7ceQ" width="150" height="150" frameBorder="5" class="giphy-embed" allowFullScreen>
-         </iframe>
-     </aside>
-    
-
+<aside class='right-side'>
+    <iframe src="https://giphy.com/embed/8J4w2i7kP7ceQ" width="150" height="150" frameBorder="5" class="giphy-embed" allowFullScreen>
+    </iframe>
+</aside>
 
 <div class="list-group my-4">
-{{#each articles as |article index|}}
+    {{#each articles as |article index|}}
     <div class="list-group-item flex-column align-items-start">
         <div class="d-flex w-100 justify-content-between">
-            <a href="{{article.url}}"><h5>{{article.title}}</h5></a>
+            <a href="{{article.url}}">
+                <h5>{{article.title}}</h5>
+            </a>
             <small>{{article.postDate}}</small>
         </div>
         <p>{{article.description}}</p>
@@ -50,14 +42,11 @@
             <form class="edit-delete" action="/articles/edit/{{article._id}}">
                 <button class="btn btn-info btn-sm clickable" type="submit">Edit Post</button>
             </form>
-                
+
             <form class="edit-delete" action="/articles/delete/{{article._id}}?_method=delete" method="post">
                 <button class="btn btn-danger btn-sm clickable" type="submit">Delete Post</button>
-            </form> 
+            </form>
         </p>
     </div>
-{{/each}}
+    {{/each}}
 </div>
-
-
-

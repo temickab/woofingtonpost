@@ -65,17 +65,3 @@ module.exports = function(passport) {
     });
   }));
 };
-  
-    
-
-
-    /*
-
-
-
-
-    
-    */
-
-
-

@@ -1,20 +1,24 @@
+// I would focus on getting the Article data to seed
 
-// const seedData = require('./seeds.json')
-//const mongoose = require('./schema') 
-
-//const Woofington = mongoose.model('Woofington') 
-//we will test our userscheam we created ok
 const user=require('./userschema')
 console.log('user schema',user)
 const userdetail = user.model('UserDetail') 
 console.log(userdetail)
+
+
 userdetail.collection.insert({email:"abc@gmail.com",password:"124"},(err,res)=>{
     console.log("error",err);
     console.log("Response data inserted",res);
 })
 
+
+// This should your Article model, rather 'Woofington'; your db seems to have been named woofington or woofington1 at one point, but here you'd be importing a model here
+
+//const Woofington = mongoose.model('Woofington') 
+
 /*Woofington.remove({})
     .then(() => {
+        //On the line below we're accessing the collection associated with model, and insert JSON data that matches the model's schema
         return Woofington.collection.insert(
         [
             {   
