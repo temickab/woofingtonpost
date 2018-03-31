@@ -27,8 +27,8 @@ app.use(function (req, res, next) {
 app.engine('handlebars', exhbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
-app.listen(3001, () => { // 3001  is working right now not 1986
-  console.log('hey') // 1986 is the year i was born')
+app.listen(3001, () => { // 3001  is working
+  console.log('hey')
 })
 
    // Routing
