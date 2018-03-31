@@ -1,48 +1,48 @@
 const express = require('express')
-const Article = require('../db/articleschema');
+const Article = require('../db/articleschema')
 const router = express.Router()
 // GET list of articles //
-router.get('/view', function(req, res) {
-    //console.log('Hre')
+router.get('/view', function (req, res) {
+    // console.log('Hre')
   Article.find({})
-    .then(function(article) {
-      res.render('articles', { articles: article })
+    .then(function (article) {
+      res.json(article)
     })
 })
 
-// CREATE new article 
-router.get('/create', function(req, res) {
-    res.render('articles-create')
+// CREATE new article
+router.get('/create', function (req, res) {
+  res.render('articles-create')
 })
 
-router.post('/create', function(req, res) {
-    Article.create(req.body.article)
-        .then(function(article) {
-        res.redirect('/articles/view')
-    })
+router.post('/create', function (req, res) {
+  Article.create(req.body.article)
+        .then(function (article) {
+          res.json(article)
+        })
 })
 
 // UPDATE existing article //
-router.get('/edit/:_id', function(req, res) {
+router.get('/edit/:_id', function (req, res) {
   Article.findOne({ _id: req.params._id })
-    .then(function(article) {
-        res.render('articles-edit', { article: article })
+    .then(function (article) {
+      res.render('articles-edit', { article: article })
     })
 })
 
-router.put('/edit/:_id', function(req, res) {
+router.put('/edit/:_id', function (req, res) {
   Article.findOneAndUpdate({ _id: req.params._id }, req.body.article, { new: true })
-    .then(function() {
+    .then(function () {
       res.redirect('/articles/view')
     })
 })
 
-//put for editing
-//post for creating
+// put for editing
+// post for creating
 // DELETE article //
-router.delete('/delete/:_id', function(req, res) {
+router.delete('/delete/:_id', function (req, res) {
   Article.findOneAndRemove({ _id: req.params._id })
-    .then(function() {
+    .then(function () {
       res.redirect('/articles/view')
     })
 })

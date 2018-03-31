@@ -7,6 +7,9 @@ const morgan = require('morgan')
 const articles = require('./controller/articles')
 const userController = require('./controller/users')
 const methodOverride = require('method-override')
+const cors = require('cors')
+
+app.use(cors())
 
 // For example, use the following code to
 // serve images, CSS files, and JavaScript files in a directory named public:
@@ -24,8 +27,8 @@ app.use(function (req, res, next) {
 app.engine('handlebars', exhbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
-app.listen(3000, () => { // 3000 is working right now not 1986
-  console.log('The best year ever is 1986) //1986 is the year i was born')
+app.listen(3001, () => { // 3001  is working right now not 1986
+  console.log('hey') // 1986 is the year i was born')
 })
 
    // Routing
